@@ -3,7 +3,7 @@ from wrap import wrap_line
 
 def test_wrap_line():
     text = "bob"
-    assert wrap_line(text) == "bob"
+    assert wrap_line(text) == "bob2"
 
 
 def test_word_gt_colmax():
