@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 4 items
+
+prime_factor.py .FFF
+
+=================================== FAILURES ===================================
+________________________________ test_primes_2 _________________________________
+
+    def test_primes_2():
+>       assert primes(2) == [2]
+E       assert None == [2]
+E        +  where None = primes(2)
+
+prime_factor.py:19: AssertionError
+________________________________ test_primes_3 _________________________________
+
+    def test_primes_3():
+>       assert primes(3) == [3]
+E       assert None == [3]
+E        +  where None = primes(3)
+
+prime_factor.py:22: AssertionError
+________________________________ test_primes_4 _________________________________
+
+    def test_primes_4():
+>       assert primes(4) == [2, 2]
+
+prime_factor.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 4
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+>               return results.extend(primes(int(nb / i)))
+E   TypeError: 'NoneType' object is not iterable
+
+prime_factor.py:11: TypeError
+====================== 3 failed, 1 passed in 0.04 seconds ======================

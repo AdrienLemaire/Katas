@@ -1,0 +1,157 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 4 items
+
+prime_factor.py FFFF
+
+=================================== FAILURES ===================================
+________________________________ test_primes_1 _________________________________
+
+    def test_primes_1():
+>       assert primes(1) == []
+E       assert None == []
+E        +  where None = primes(1)
+
+prime_factor.py:17: AssertionError
+________________________________ test_primes_2 _________________________________
+
+    def test_primes_2():
+>       assert primes(2) == [2]
+
+prime_factor.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+!!! Recursion detected (same locals & position)
+________________________________ test_primes_3 _________________________________
+
+    def test_primes_3():
+>       assert primes(3) == [3]
+
+prime_factor.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 3
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+!!! Recursion detected (same locals & position)
+________________________________ test_primes_4 _________________________________
+
+    def test_primes_4():
+>       assert primes(4) == [2, 2]
+
+prime_factor.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 4
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        results = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               print(primes(2))
+
+prime_factor.py:12: 
+!!! Recursion detected (same locals & position)
+=========================== 4 failed in 0.40 seconds ===========================

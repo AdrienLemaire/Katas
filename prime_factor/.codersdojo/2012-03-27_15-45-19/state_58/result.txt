@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 6 items
+
+prime_factor.py .....F
+
+=================================== FAILURES ===================================
+________________________________ test_primes_6 _________________________________
+
+    def test_primes_6():
+>       assert primes(6) == [2, 2, 2]
+E       assert [2, 3] == [2, 2, 2]
+E         At index 1 diff: 3 != 2
+E         Right contains more items, first extra item: 2
+
+prime_factor.py:35: AssertionError
+------------------------------- Captured stdout --------------------------------
+nb = 6
+nb = 3
+nb = 1
+====================== 1 failed, 5 passed in 0.04 seconds ======================

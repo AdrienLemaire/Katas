@@ -1,0 +1,7 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 4 items
+
+prime_factor.py ....
+
+=========================== 4 passed in 0.03 seconds ===========================

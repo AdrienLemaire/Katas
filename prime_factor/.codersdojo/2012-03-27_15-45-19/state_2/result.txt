@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 0 items / 1 errors
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting prime_factor.py _______________________
+../../../.virtualenvs/kata/lib/python3.2/site-packages/_pytest/python.py:265: in _importtestmodule
+>           mod = self.fspath.pyimport(ensuresyspath=True)
+../../../.virtualenvs/kata/lib/python3.2/site-packages/py/_path/local.py:531: in pyimport
+>           mod = __import__(modname, None, None, ['__doc__'])
+E             File "/home/dori/Projets/Katas/prime_factor/prime_factor.py", line 10
+E               print i
+E                     ^
+E           SyntaxError: invalid syntax
+=========================== 1 error in 0.01 seconds ============================

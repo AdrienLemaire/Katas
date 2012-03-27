@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 2 items
+
+prime_factor.py FF
+
+=================================== FAILURES ===================================
+________________________________ test_primes_1 _________________________________
+
+    def test_primes_1():
+>       assert primes(1) == []
+E       assert 1 == []
+E        +  where 1 = primes(1)
+
+prime_factor.py:9: AssertionError
+________________________________ test_primes_2 _________________________________
+
+    def test_primes_2():
+>       assert primes(2) == [2]
+E       assert 2 == [2]
+E        +  where 2 = primes(2)
+
+prime_factor.py:12: AssertionError
+=========================== 2 failed in 0.02 seconds ===========================

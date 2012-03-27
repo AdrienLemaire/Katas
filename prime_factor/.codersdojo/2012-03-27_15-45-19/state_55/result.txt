@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 4 items
+
+prime_factor.py .FFF
+
+=================================== FAILURES ===================================
+________________________________ test_primes_2 _________________________________
+
+    def test_primes_2():
+        print("** test 2")
+>       assert primes(2) == [2]
+E       assert None == [2]
+E        +  where None = primes(2)
+
+prime_factor.py:26: AssertionError
+------------------------------- Captured stdout --------------------------------
+** test 2
+nb = 2
+nb = 1
+None
+________________________________ test_primes_3 _________________________________
+
+    def test_primes_3():
+        print("** test 3")
+>       assert primes(3) == [3]
+E       assert None == [3]
+E        +  where None = primes(3)
+
+prime_factor.py:30: AssertionError
+------------------------------- Captured stdout --------------------------------
+** test 3
+nb = 3
+nb = 1
+None
+________________________________ test_primes_4 _________________________________
+
+    def test_primes_4():
+        print("** test 4")
+>       assert primes(4) == [2, 2]
+
+prime_factor.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 4
+
+    def primes(nb):
+        print("nb = %s" % nb)
+        results = []
+        if nb == 1:
+            return results
+        for i in range(2, nb+1):
+            if nb < i:
+                return results
+            if nb % i == 0:
+                results.append(i)
+                new_nb = int(nb / i)
+>               aa = results.extend(primes(new_nb))
+E               TypeError: 'NoneType' object is not iterable
+
+prime_factor.py:15: TypeError
+------------------------------- Captured stdout --------------------------------
+** test 4
+nb = 4
+nb = 2
+nb = 1
+None
+====================== 3 failed, 1 passed in 0.04 seconds ======================

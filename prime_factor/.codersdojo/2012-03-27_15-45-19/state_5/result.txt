@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 2 items
+
+prime_factor.py .F
+
+=================================== FAILURES ===================================
+________________________________ test_primes_2 _________________________________
+
+    def test_primes_2():
+>       assert primes(2) == [2]
+E       assert [] == [2]
+E         Right contains more items, first extra item: 2
+
+prime_factor.py:20: AssertionError
+====================== 1 failed, 1 passed in 0.02 seconds ======================

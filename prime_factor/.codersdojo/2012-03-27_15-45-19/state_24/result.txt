@@ -1,0 +1,88 @@
+============================= test session starts ==============================
+platform linux2 -- Python 3.2.2 -- pytest-2.2.3
+collecting ... collected 4 items
+
+prime_factor.py FFFF
+
+=================================== FAILURES ===================================
+________________________________ test_primes_1 _________________________________
+
+    def test_primes_1():
+>       assert primes(1) == []
+E       assert None == []
+E        +  where None = primes(1)
+
+prime_factor.py:18: AssertionError
+________________________________ test_primes_2 _________________________________
+
+    def test_primes_2():
+>       assert primes(2) == [2]
+
+prime_factor.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 2
+
+    def primes(nb):
+        primes = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return primes
+            if nb % i == 0:
+                primes.append(i)
+                print(primes)
+>               print(primes(2))
+E               TypeError: 'list' object is not callable
+
+prime_factor.py:12: TypeError
+------------------------------- Captured stdout --------------------------------
+[2]
+________________________________ test_primes_3 _________________________________
+
+    def test_primes_3():
+>       assert primes(3) == [3]
+
+prime_factor.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 3
+
+    def primes(nb):
+        primes = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return primes
+            if nb % i == 0:
+                primes.append(i)
+                print(primes)
+>               print(primes(2))
+E               TypeError: 'list' object is not callable
+
+prime_factor.py:12: TypeError
+------------------------------- Captured stdout --------------------------------
+[3]
+________________________________ test_primes_4 _________________________________
+
+    def test_primes_4():
+>       assert primes(4) == [2, 2]
+
+prime_factor.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nb = 4
+
+    def primes(nb):
+        primes = []
+        for i in range(2, nb+1):
+            if nb < i:
+                return primes
+            if nb % i == 0:
+                primes.append(i)
+                print(primes)
+>               print(primes(2))
+E               TypeError: 'list' object is not callable
+
+prime_factor.py:12: TypeError
+------------------------------- Captured stdout --------------------------------
+[2]
+=========================== 4 failed in 0.04 seconds ===========================
